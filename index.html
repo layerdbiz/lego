@@ -1,245 +1,286 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L.E.G.O</title>
-    <link rel="icon" href="favicon.png" type="image/png">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let's Build Something Together - B-ROD 2027 Campaign | Benjamin Rodriguez</title>
+  <link rel="icon" href="favicon.png" type="image/png">
 
-    <title>Let's Build Something Together - B-ROD 2027 Campaign | Benjamin Rodriguez</title>
-    <meta name="description" content="Campaign website for Benjamin Rodriguez (B-ROD) for Texas Realtors Secretary/Treasurer.">
+  <meta name="description" content="Campaign website for Benjamin Rodriguez (B-ROD) for Texas REALTORS® Secretary/Treasurer.">
 
-    <meta property="og:title" content="Let's Build Something Together - B-ROD 2027 Campaign | Benjamin Rodriguez">
-    <meta property="og:description" content="Campaign website for Benjamin Rodriguez (B-ROD) for Texas Realtors Secretary/Treasurer.">
-    <meta property="og:image" content="https://lego-campaign.vercel.app/og.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Benjamin Rodriguez Campaign Banner">
-    <meta property="og:url" content="https://lego-campaign.vercel.app/">
-    <meta property="og:type" content="website">
+  <meta property="og:title" content="Let's Build Something Together - B-ROD 2027 Campaign | Benjamin Rodriguez">
+  <meta property="og:description" content="Campaign website for Benjamin Rodriguez (B-ROD) for Texas REALTORS® Secretary/Treasurer.">
+  <meta property="og:image" content="https://lego-campaign.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Benjamin Rodriguez Campaign Banner">
+  <meta property="og:url" content="https://lego-campaign.vercel.app/">
+  <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/src/style.css" />
 
-  <body class="font-sans bg-gray-50 text-dark">
-    <nav class="bg-white shadow-md fixed top-0 w-full z-50">
-      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+  <script>
+    (function() {
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      if (isIOS) {
+        document.documentElement.classList.add('is-ios');
+      }
+    })();
+  </script>
+</head>
 
-        <a href="#hero-cover" class="logo-container overflow-hidden flex items-center justify-center max-h-14">
-          <img src="logo-color.png" alt="LEGO B-ROD 2027 Logo" style="height: 96px; width: auto;" />
+<body class="font-sans bg-gray-50 text-dark">
+  <nav class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+
+      <a href="#hero-cover" class="logo-container overflow-hidden flex items-center justify-center max-h-14"
+        aria-label="Home - Benjamin Rodriguez Campaign">
+        <img src="logo-color.png" alt="LEGO B-ROD 2027 Logo" style="height: 96px; width: auto;" />
+      </a>
+
+      <div class="hidden md:flex space-x-8 nav-links">
+        <a href="#hero-cover" class="hover:text-primary transition font-medium">Home</a>
+        <a href="#about" class="hover:text-primary transition font-medium">About</a>
+        <a href="#video" class="hover:text-primary transition font-medium">Video</a>
+        <a href="#lego" class="hover:text-primary transition font-medium">L.E.G.O.</a>
+        <a href="#contact" class="hover:text-primary transition font-medium">Contact</a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Open mobile menu"><i
+          class="fas fa-bars text-2xl"></i></button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden nav-links">
+      <a href="#hero-cover" class="block px-4 py-2 hover:text-primary transition">Home</a>
+      <a href="#about" class="block px-4 py-2 hover:text-primary transition">About</a>
+      <a href="#video" class="block px-4 py-2 hover:text-primary transition">Video</a>
+      <a href="#lego" class="block px-4 py-2 hover:text-primary transition">L.E.G.O.</a>
+      <a href="#contact" class="block px-4 py-2 hover:text-primary transition">Contact</a>
+    </div>
+  </nav>
+
+  <section id="hero-cover" class="lego-bg relative text-white overflow-hidden min-h-[120svh]">
+
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+    <div class="container mx-auto px-4 relative z-10 text-center flex flex-col items-center justify-center h-svh">
+
+      <h1 id="hero-main-slogan" class="text-5xl sm:text-6xl md:text-7xl mb-8 md:mb-10 leading-tight pt-20">
+        <span class="hero-slogan-word animate-pop-in" style="animation-delay: 0.2s;">LET'S BUILD</span>
+        <span class="hero-slogan-word animate-pop-in" style="animation-delay: 0.4s;">SOMETHING</span>
+        <span class="hero-slogan-word text-gradient animate-pop-in" style="animation-delay: 0.6s;">TOGETHER!</span>
+      </h1>
+      <div id="hero-lego-brod" class="animate-fade-in-up" style="animation-delay: 1s;">
+        <div class="inline-block mx-auto">
+          <img src="logo-white.png" alt="LEGO B-ROD 2027 Logo" class="h-48 w-auto" />
+        </div>
+      </div>
+
+      <div class="mt-10 md:mt-12 animate-fade-in-up" style="animation-delay: 1.2s;">
+        <a href="#video"
+          class="bg-secondary hover:bg-[#c000b5] text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-transform transform hover:scale-105 inline-block"
+          aria-label="Learn more about Benjamin Rodriguez's vision">
+          Learn More <i class="fas fa-arrow-down ml-2"></i>
         </a>
-
-        <div class="hidden md:flex space-x-8 nav-links">
-          <a href="#hero-cover" class="hover:text-primary transition font-medium">Home</a>
-          <a href="#about" class="hover:text-primary transition font-medium">About</a>
-          <a href="#video" class="hover:text-primary transition font-medium">Video</a>
-          <a href="#lego" class="hover:text-primary transition font-medium">L.E.G.O.</a>
-          <a href="#contact" class="hover:text-primary transition font-medium">Contact</a>
-        </div>
-        <button id="mobile-menu-button" class="md:hidden text-primary"><i class="fas fa-bars text-2xl"></i></button>
       </div>
-      <div id="mobile-menu" class="mobile-menu hidden md:hidden nav-links">
-        <a href="#hero-cover" class="block px-4 py-2 hover:text-primary transition">Home</a>
-        <a href="#about" class="block px-4 py-2 hover:text-primary transition">About</a>
-        <a href="#video" class="block px-4 py-2 hover:text-primary transition">Video</a>
-        <a href="#lego" class="block px-4 py-2 hover:text-primary transition">L.E.G.O.</a>
-        <a href="#contact" class="block px-4 py-2 hover:text-primary transition">Contact</a>
-      </div>
-    </nav>
+    </div>
 
-    <section id="hero-cover" class="lego-bg relative text-white overflow-hidden min-h-[120svh]">
-      
-      <div class="absolute inset-0 bg-black/40 z-0"></div>
-      <div class="container mx-auto px-4 relative z-10 text-center flex flex-col items-center justify-center h-svh">
+    <i class="divider absolute w-full h-[100px] bottom-0 overflow-hidden pointer-events-none">
+      <img src="/dividers/legos.svg" alt="lego svg pattern" class="absolute w-full h-full top-0 left-0 object-cover invert">
+    </i>
+  </section>
 
-        <h1 id="hero-main-slogan" class="text-5xl sm:text-6xl md:text-7xl mb-8 md:mb-10 leading-tight pt-20">
-          <span class="hero-slogan-word animate-pop-in" style="animation-delay: 0.2s;">LET'S BUILD</span>
-          <span class="hero-slogan-word animate-pop-in" style="animation-delay: 0.4s;">SOMETHING</span>
-          <span class="hero-slogan-word text-gradient animate-pop-in" style="animation-delay: 0.6s;">TOGETHER!</span>
-        </h1>
-        <div id="hero-lego-brod" class="animate-fade-in-up" style="animation-delay: 1s;">
-          <div class="inline-block mx-auto">
-            <img src="logo-white.png" alt="LEGO B-ROD 2027 Logo" class="h-48 w-auto" />
+
+  <section id="about" class="flex flex-col justify-center items-center bg-white relative">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 py-16 md:py-12">
+      <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20">
+        <div class="lg:w-2/5 order-1 lg:order-1 flex flex-col items-center">
+          <div class="bio-image-wrapper relative flex items-center justify-center">
+            <div class="absolute -left-16 md:-left-24 top-1/2 -translate-y-1/2 z-0">
+              <svg class="w-[450px] h-[450px] md:w-[600px] md:h-[600px] animate-blob" viewBox="0 0 400 400" fill="none"
+                style="z-index:0;">
+                <path fill="#a259e6" fill-opacity="0.25">
+                  <animate attributeName="d" dur="8s" repeatCount="indefinite"
+                    values="
+                                M320,200Q320,280,240,320Q160,360,80,320Q0,280,0,200Q0,120,80,80Q160,40,240,80Q320,120,320,200Z;
+                                M340,200Q340,280,260,320Q180,360,100,320Q20,280,20,200Q20,120,100,80Q180,40,260,80Q340,120,340,200Z;
+                                M320,200Q320,280,240,320Q160,360,80,320Q0,280,0,200Q0,120,80,80Q160,40,240,80Q320,120,320,200Z
+                              " />
+                </path>
+              </svg>
+            </div>
+            <img src="static/benjamin-rodriguez.png" alt="Benjamin Rodriguez, Candidate Photo"
+              class="bio-image relative z-10">
+          </div>
+          <div class="about-image-info mt-6 md:text-center">
+            <h3 class="text-xl font-bold text-primary-800">Benjamin Rodriguez</h3>
+            <p class="text-primary-600 text-lg">Texas REALTORS® Secretary/Treasurer 2027</p>
+            <div class="mt-4 flex justify-center">
+              <a href="https://www.facebook.com/BROD4TR2027/" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook Campaign Page" class="text-primary-500 hover:text-primary-700 text-2xl"><i
+                  class="fab fa-facebook"></i></a>
+            </div>
           </div>
         </div>
+        <div class="lg:w-3/5 order-2 lg:order-2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-800 text-center">About Benjamin Rodriguez</h2>
+          <div class="about-content max-w-none">
+            <p class="text-lg text-center md:text-justify mb-3">A seasoned real estate professional with over two decades of experience
+              in Southeast Texas. At just 21 years old, he founded Triangle Real Estate LLC in 2007, bringing a fresh
+              perspective to the industry. His firm has since become a trusted name in residential, commercial, and land
+              transactions across the region.</p>
+            <p class="text-lg text-center md:text-justify mb-3">A lifelong Texan, Benjamin holds an Associates degree in Real Estate
+              from Lamar Institute of Technology and is deeply committed to community service. He has held several
+              leadership positions, including serving as the 2018 President of the Beaumont Board of REALTORS®, Texas
+              REALTORS® Region 9 RVP 2019-2022, and as the 2023 Chair of the Texas Real Estate Political Action Committee
+              (TREPAC). His dedication to the profession has earned him accolades such as the 2015 Salesperson of the Year
+              and recognition as a 2018 Texas Young Professionals Network (YPN) REALTOR® to Watch. Triangle Real Estate
+              LLC was awarded the Better Business Bureau of Southeast Texas Torch Award for Work Place Ethics in 2023.</p>
+            <div class="flex justify-center">
+              <a href="Ben-Credentials.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary mt-4 mb-4"
+                aria-label="View Benjamin Rodriguez's Credentials (PDF)">Credentials</a>
+            </div>
+            <p class="text-lg text-center md:text-justify mb-3">Beyond his brokerage, Benjamin is actively involved in political
+              advocacy and community development throughout Southeast Texas. He is a member of the National Association
+              of REALTORS® RPAC Hall of Fame at the $75,000 Level and currently serves as an At Large TREPAC Trustee as
+              well as the Region 10 RPAC Fundraising Trustee covering Texas and Louisiana.</p>
+            <p class="text-lg text-center md:text-justify mb-3">Benjamin’s approach to real estate is characterized by innovation and
+              a commitment to excellence, making him a respected leader in the industry.</p>
+            <p class="text-lg text-center md:text-justify mb-3">He doesn’t do it alone; Benjamin’s success is rooted in the unwavering
+              support of his wife, Tobetha Rodriguez, who has always been his rock. Their daughter, Autumn Rodriguez,
+              carries on the family legacy as both a REALTOR®, and Executive Assistant to her father.</p>
+            <p class="text-lg text-center md:text-justify">And at the heart of it all is his beloved granddaughter, Sadie
+              affectionately known as “Piglet” who serves as the ultimate reminder that no matter how busy the day,
+              there’s always a reason to wrap up work and get home early.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="mt-10 md:mt-12 animate-fade-in-up" style="animation-delay: 1.2s;">
-          <a href="#video" class="bg-secondary hover:bg-[#c000b5] text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-transform transform hover:scale-105 inline-block">
-              Learn More <i class="fas fa-arrow-down ml-2"></i>
+
+  <section id="video" class="relative bg-light text-dark min-h-svh flex flex-col justify-center items-center">
+    <div class="watermark top-10 left-10 text-9xl font-bold text-primary-800 opacity-10 z-0">LEGO</div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10 py-16 md:py-20">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2 text-center lg:text-left">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-800">My Vision in Action</h2>
+          <p class="text-xl mb-8">Learn more about my vision for Texas REALTORS®.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#contact" class="btn btn-primary" aria-label="Get Involved with the campaign">Get Involved</a>
+          </div>
+        </div>
+        <div class="w-full flex justify-center lg:justify-end overflow-hidden">
+          <div class="hero-video bg-gray-800 rounded-xl overflow-hidden relative primary-glow shadow-2xl">
+            <video class="w-full h-full object-cover" controls autoplay muted playsinline>
+              <source src="video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="lego" class="min-h-svh flex flex-col justify-center items-center lego-bg text-white relative">
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 text-center py-20 md:py-24 relative z-10">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 md:mb-20">The <span class="text-secondary">L.E.G.O.</span> Building
+        Blocks</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-6xl mx-auto">
+        <div
+          class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
+          <div class="text-7xl font-extrabold mb-4 text-secondary">L</div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-3">Leadership</h3>
+          <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Proven guidance for our
+            association's future</p>
+        </div>
+        <div
+          class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
+          <div class="text-7xl font-extrabold mb-4 text-secondary">E</div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-3">Empowers</h3>
+          <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Strengthening every member's
+            potential</p>
+        </div>
+        <div
+          class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
+          <div class="text-7xl font-extrabold mb-4 text-secondary">G</div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-3">Growth</h3>
+          <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Expanding opportunities for all</p>
+        </div>
+        <div
+          class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
+          <div class="text-7xl font-extrabold mb-4 text-secondary">O</div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-3">Opportunity</h3>
+          <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Creating pathways to success</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="min-h-svh flex flex-col justify-center items-center bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 py-16 md:py-20">
+      <div class="w-full max-w-2xl mx-auto">
+        <div class="m-4 md:m-8 p-4 md:p-8 bg-white rounded-lg">
+          <h1 class="text-3xl md:text-4xl font-bold text-center text-primary-800 mb-8">LEGO FORM</h1>
+          <form id="campaignContactForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScPz1RDHS0Q5MtvN48OqsemcI8uPy8c2xWi2MvbnKDSHnoQsA/formResponse"
+            method="POST" target="hidden_iframe" class="space-y-4">
+            <div>
+              <label for="form-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input type="text" id="form-name" name="entry.51566254"
+                class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500"
+                required />
+            </div>
+            <div>
+              <label for="form-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="form-email" name="entry.1924887456"
+                class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500"
+                required />
+            </div>
+            <div>
+              <label for="form-message-text" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="form-message-text" name="entry.857861953" rows="4"
+                class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary w-full" aria-label="Send your message">
+              Send Message
+            </button>
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+            onload="if(window.submitted) { alert('Thanks for submitting!'); window.submitted=false; if(document.getElementById('campaignContactForm')) { document.getElementById('campaignContactForm').reset(); } }"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-primary-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+
+          <a href="#hero-cover" class="logo-container overflow-hidden flex items-center justify-center max-h-14"
+            aria-label="Home - Benjamin Rodriguez Campaign">
+            <img src="logo-white.png" alt="LEGO B-ROD 2027 Logo" style="height: 96px; width: auto;" />
           </a>
+
+        </div>
+        <div
+          class="nav-links flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left mt-4 md:mt-0">
+          <a href="#hero-cover" class="hover:text-secondary transition">Home</a>
+          <a href="#about" class="hover:text-secondary transition">About</a>
+          <a href="#video" class="hover:text-secondary transition">Video</a>
+          <a href="#lego" class="hover:text-secondary transition">L.E.G.O.</a>
+          <a href="#contact" class="hover:text-secondary transition">Contact</a>
         </div>
       </div>
-
-      <!-- Divider Bottom -->
-      <i class="divider absolute w-full h-[100px] bottom-0 overflow-hidden pointer-events-none">
-        <img src="/static/dividers/legos.svg" alt="lego svg pattern" class="absolute w-full h-full top-0 left-0 object-cover invert">
-      </i>
-    </section>
-
-
-    <section id="about" class="min-h-svh flex flex-col justify-center items-center bg-white relative">
-
-      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 py-16 md:py-20">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
-          <div class="lg:w-2/5">
-            <div class="bio-image rounded-xl overflow-hidden bg-primary-100 p-2.5 md:p-3 shadow-lg">
-              <img src="benjamin-rodriguez.png" alt="Benjamin Rodriguez, Candidate Photo" class="w-full h-auto block rounded-md">
-            </div>
-            <div class="mt-8 text-center">
-              <h3 class="text-2xl font-bold text-primary-800">Benjamin Rodriguez</h3>
-              <p class="text-primary-600 text-lg">For Texas Realtors Secretary/Treasurer</p>
-              <div class="mt-6 flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/in/trianglerealestatellc/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-primary-500 hover:text-primary-700 text-2xl"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/ben.rodriguez.3152" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile" class="text-primary-500 hover:text-primary-700 text-2xl"><i class="fab fa-facebook"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="lg:w-3/5">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-800">About Benjamin Rodriguez</h2>
-            <div class="prose max-w-none">
-              <p class="text-lg mb-6">A seasoned real estate professional with over two decades of experience in Southeast Texas. At just 21 years old, he founded Triangle Real Estate LLC in 2007, bringing a fresh perspective to the industry. His firm has since become a trusted name in residential, commercial, and land transactions across the region.</p>
-              <p class="text-lg mb-6">A lifelong Texan, Benjamin holds an Associates degree in Real Estate from Lamar Institute of Technology and is deeply committed to community service. He has held several leadership positions, including serving as the 2018 President of the Beaumont Board of REALTORS®, Texas REALTORS® Region 9 RVP 2019-2022, and as the 2023 Chair of the Texas Real Estate Political Action Committee (TREPAC). His dedication to the profession has earned him accolades such as the 2015 Salesperson of the Year and recognition as a 2018 Texas Young Professionals Network (YPN) REALTOR® to Watch. Triangle Real Estate LLC was awarded the Better Business Bureau of Southeast Texas Torch Award for Work Place Ethics in 2023.</p>
-              <p class="text-lg mb-6">Beyond his brokerage, Benjamin is actively involved in political advocacy and community development throughout Southeast Texas. He is a member of the National Association of REALTORS® RPAC Hall of Fame at the $75,000 Level and currently serves as an At Large TREPAC Trustee as well as the Region 10 RPAC Fundraising Trustee covering Texas and Louisiana.</p>
-              <p class="text-lg mb-6">Benjamin’s approach to real estate is characterized by innovation and a commitment to excellence, making him a respected leader in the industry.</p>
-              <p class="text-lg mt-6 mb-4">He doesn’t do it alone; Benjamin’s success is rooted in the unwavering support of his wife, Tobetha Rodriguez, who has always been his rock. Their daughter, Autumn Rodriguez, carries on the family legacy as both a licensed REALTOR® and Executive Assistant to her father.</p>
-              <p class="text-lg mb-4">And at the heart of it all is his beloved granddaughter, Sadie affectionately known as “Piglet” who serves as the ultimate reminder that no matter how busy the day, there’s always a reason to wrap up work and get home early.</p>
-            </div>
-          </div>
-        </div>
+      <div class="border-t border-primary-700/40 mt-6 pt-6 text-sm text-center opacity-70">
+        <p>© <span id="currentYear"></span> Benjamin Rodriguez Campaign. All Rights Reserved.</p>
       </div>
-    </section>
-
-
-    <section id="video" class="relative bg-light text-dark min-h-svh flex flex-col justify-center items-center">
-      <div class="watermark top-10 left-10 text-9xl font-bold text-primary-800 opacity-10 z-0">LEGO</div>
-      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10 py-16 md:py-20">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
-          <div class="lg:w-1/2 text-center lg:text-left">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-800">My Vision in Action</h2>
-            <p class="text-xl mb-8">Learn more about my vision for Texas Realtors.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#contact" class="btn btn-primary">Get Involved</a>
-            </div>
-          </div>
-          <div class="w-full flex justify-center lg:justify-end overflow-hidden">
-            <div class="hero-video bg-gray-800 rounded-xl overflow-hidden relative primary-glow shadow-2xl">
-              <video class="w-full h-full object-cover" controls autoplay muted>
-                <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="lego" class="min-h-svh flex flex-col justify-center items-center lego-bg text-white">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 text-center py-20 md:py-24">
-        <h2 class="text-4xl md:text-5xl font-bold mb-16 md:mb-20">The <span class="text-secondary">L.E.G.O.</span> Building Blocks</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-6xl mx-auto">
-          <div class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
-            <div class="text-7xl font-extrabold mb-4 text-secondary">L</div>
-            <h3 class="text-2xl md:text-3xl font-bold mb-3">Leadership</h3>
-            <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Proven guidance for our association's future</p>
-          </div>
-          <div class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
-            <div class="text-7xl font-extrabold mb-4 text-secondary">E</div>
-            <h3 class="text-2xl md:text-3xl font-bold mb-3">Empowers</h3>
-            <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Strengthening every member's potential</p>
-          </div>
-          <div class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
-            <div class="text-7xl font-extrabold mb-4 text-secondary">G</div>
-            <h3 class="text-2xl md:text-3xl font-bold mb-3">Growth</h3>
-            <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Expanding opportunities for all</p>
-          </div>
-          <div class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
-            <div class="text-7xl font-extrabold mb-4 text-secondary">O</div>
-            <h3 class="text-2xl md:text-3xl font-bold mb-3">Opportunity</h3>
-            <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Creating pathways to success</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="contact" class="min-h-svh flex flex-col justify-center items-center bg-primary-50">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 py-16 md:py-20">
-        <div class="w-full max-w-2xl mx-auto">
-          <div class="m-4 md:m-8 p-4 md:p-8 bg-white rounded-lg">
-            <h1 class="text-3xl md:text-4xl font-bold text-center text-primary-800 mb-8">LEGO FORM</h1>
-            <form
-              id="campaignContactForm"
-              action="https://docs.google.com/forms/d/e/1FAIpQLScPz1RDHS0Q5MtvN48OqsemcI8uPy8c2xWi2MvbnKDSHnoQsA/formResponse"
-              method="POST"
-              target="hidden_iframe"
-              onsubmit="submitted=true;"
-              class="space-y-4">
-              <div>
-                <label for="form-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                <input
-                  type="text"
-                  id="form-name"
-                  name="entry.51566254"
-                  class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500"
-                  required />
-              </div>
-              <div>
-                <label for="form-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input
-                  type="email"
-                  id="form-email"
-                  name="entry.1924887456"
-                  class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500"
-                  required />
-              </div>
-              <div>
-                <label for="form-message-text" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea
-                          id="form-message-text"
-                          name="entry.857861953"
-                          rows="4"
-                          class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500"
-                        ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="btn btn-secondary w-full">
-                Send Message
-              </button>
-            </form>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { alert('Thanks for submitting!'); window.submitted=false; if(document.getElementById('campaignContactForm')) { document.getElementById('campaignContactForm').reset(); } }"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="bg-primary-800 text-white py-8">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-4 md:mb-0 text-center md:text-left">
-
-            <a href="#hero-cover" class="campaign-logo-wrapper flex items-center justify-center md:justify-start">
-              <img src="logo-white.png" alt="LEGO B-ROD 2027 Logo" class="h-14 md:h-20 w-auto" />
-            </a>
-
-          </div>
-          <div class="nav-links flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left mt-4 md:mt-0">
-            <a href="#hero-cover" class="hover:text-secondary transition">Home</a>
-            <a href="#about" class="hover:text-secondary transition">About</a>
-            <a href="#video" class="hover:text-secondary transition">Video</a>
-            <a href="#lego" class="hover:text-secondary transition">L.E.G.O.</a>
-            <a href="#contact" class="hover:text-secondary transition">Contact</a>
-          </div>
-        </div>
-        <div class="border-t border-primary-700/40 mt-6 pt-6 text-sm text-center opacity-70">
-          <p>© <span id="currentYear"></span> Benjamin Rodriguez Campaign. All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
 
 </html>
