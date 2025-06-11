@@ -28,8 +28,8 @@ export default function nav() {
 	// Scroll Spy for active navigation links
 	const sections = document.querySelectorAll("section[id]");
 	// Selects nav links specifically from the main navigation bar (desktop and mobile)
-	const navLinks = document.querySelectorAll("nav .nav-links a");
-	const navElement = document.querySelector("nav");
+	const navLinks = document.querySelectorAll(".nav-links a");
+	const navElement = document.querySelector("header");
 	let navHeight = 0;
 
 	if (navElement) {

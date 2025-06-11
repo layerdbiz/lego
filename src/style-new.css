@@ -14,10 +14,11 @@
   --color-primary-500: #a855f7;
   --color-primary-600: #9333ea;
   --color-primary-700: #7e22ce;
-  --color-primary-800: #5e186e; /* Main primary color */
+  --color-primary-800: #5e186e;
   --color-primary-900: #581c87;
 
   --color-secondary: #e500ce;
+  /* create a secondary color pallette using #e500ce as the 500 */
   --color-secondary-100: #fde8ff;
   --color-secondary-200: #fbcfe8;
   --color-secondary-300: #f9a8d4;
@@ -110,8 +111,7 @@ body {
 }
 
 .lego-card {
-  @apply transition-all duration-300 ease-in-out 
-  bg-primary/40 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center;
+  @apply bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out;
 }
 .lego-card:hover {
   @apply -translate-y-2 scale-105;
@@ -244,10 +244,6 @@ nav .campaign-lego-text {
 .nav-links a.active-link {
   @apply text-primary font-bold;
 }
-footer .nav-links a.active-link {
-  @apply text-secondary font-bold;
-}
-
 #mobile-menu a.active-link {
   @apply bg-primary-100;
 }

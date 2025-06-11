@@ -114,6 +114,6 @@ Simply run `pnpm build` and deploy the contents of the `dist/` directory.
 ## 📝 Notes
 
 - The project uses Tailwind CSS v4 with the new Vite plugin
-- Static assets are served from the `static/` directory
+- Static assets are served from the `static/` directory (e.g. use `/images)
 - The development server automatically opens in your browser
 - Hot reload is enabled for a smooth development experience
