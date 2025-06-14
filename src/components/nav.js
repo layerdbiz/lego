@@ -1,25 +1,9 @@
 // src/components/nav.js
 
 export default function nav() {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelectorAll('nav .nav-links a'); // Selects only nav links within the <nav> element
     const footerNavLinks = document.querySelectorAll('footer .nav-links a'); // Selects nav links within the <footer>
     const sections = document.querySelectorAll('section'); // Get all sections
-
-    // Toggle mobile menu
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
 
     // Function to set active nav link based on scroll position
     const setActiveNavLink = () => {

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Let's Build Something Together - B-ROD 2027 Campaign | Benjamin Rodriguez</title>
-  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
 
   <meta name="description" content="Campaign website for Benjamin Rodriguez (B-ROD) for Texas REALTORS® Secretary/Treasurer.">
 
@@ -101,14 +101,18 @@
             <img src="/images/benjamin-rodriguez.png" alt="Benjamin Rodriguez, Candidate Photo"
               class="bio-image relative z-10 w-10/12">
           </div>
-          <div class="about-image-info mt-6 md:text-center">
-            <h3 class="text-xl md:text-xl font-bold text-primary-800 text-center">Benjamin Rodriguez</h3>
-            <p class="text-primary-600 text-lg md:text-base">Texas REALTORS® Secretary/Treasurer 2027</p>
-            <p class="text-primary-600 text-lg md:text-base">Candidate 4</p>
+          <div class="about-image-info mt-6 text-center">
             <div class="mt-4 flex justify-center">
               <a href="https://www.facebook.com/BROD4TR2027/" target="_blank" rel="noopener noreferrer"
                 aria-label="Facebook Campaign Page" class="text-primary-500 hover:text-primary-700 text-2xl"><i
                   class="fab fa-facebook"></i></a>
+            </div>
+            <h3 class="text-xl md:text-xl font-bold text-primary-800 text-center">Benjamin Rodriguez</h3>
+
+            <p class="text-primary-600 text-lg md:text-base">Candidate For Texas REALTORS® Secretary/Treasurer 2027</p>
+            <div class="flex justify-center mt-4 mb-4">
+              <a href="/images/Credentials.png" target="_blank" rel="noopener noreferrer" class="inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer bg-primary hover:brightness-150 no-underline"
+                aria-label="View Benjamin Rodriguez's Credentials (PDF)">Credentials</a>
             </div>
           </div>
         </div>
@@ -127,11 +131,7 @@
               <summary class="font-semibold text-primary-800 cursor-pointer py-2 text-lg md:text-xl">Leadership & Awards</summary>
               <div class="accordion-content">
                 <p class="mt-2 text-gray-700 text-base lg:text-lg">A lifelong Texan, Benjamin holds an Associates degree in Real Estate from Lamar Institute of Technology and is deeply committed to community service. He has held several leadership positions, including serving as the 2018 President of the Beaumont Board of REALTORS®, Texas REALTORS® Region 9 RVP 2019-2022, and as the 2023 Chair of the Texas Real Estate Political Action Committee (TREPAC). His dedication to the profession has earned him accolades such as the 2015 Salesperson of the Year and recognition as a 2018 Texas Young Professionals Network (YPN) REALTOR® to Watch. Triangle Real Estate LLC was awarded the Better Business Bureau of Southeast Texas Torch Award for Work Place Ethics in 2023.</p>
-                <div class="flex justify-center mt-4 mb-4">
-                  <a href="/images/LEGO_Push_Cards.png" target="_blank" rel="noopener noreferrer" class="inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer bg-primary hover:brightness-150 no-underline"
-                    aria-label="View Benjamin Rodriguez's Credentials (PDF)">Credentials</a>
                 </div>
-              </div>
             </details>
             <details class="accordion-item bg-purple-50 p-4 rounded-xl">
               <summary class="font-semibold text-primary-800 cursor-pointer py-2 text-lg md:text-xl">Advocacy & Impact</summary>
@@ -157,29 +157,39 @@
     </div>
   </section>
 
-
   <section id="video" class="relative bg-light text-dark min-h-svh flex flex-col justify-center items-center py-16 md:py-20">
-    <div class="watermark top-10 left-10 text-9xl font-bold text-primary-800 opacity-10 z-0">LEGO</div>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:w-1/2 text-center lg:text-left">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-800">My Vision in Action</h2>
-          <p class="text-xl mb-8">Learn more about my vision for Texas REALTORS®.</p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#contact" class="inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer bg-secondary hover:brightness-150" aria-label="Get Involved with the campaign">Get Involved</a>
-          </div>
-        </div>
-        <div class="w-full flex justify-center lg:justify-end overflow-hidden">
-          <div class="hero-video bg-gray-800 primary-glow">
-            <video class="w-full h-full object-cover" controls autoplay muted playsinline>
-              <source src="/images/video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
+  <div class="watermark absolute top-10 right-10 text-8xl md:text-9xl font-bold text-primary-800 opacity-10 z-0">
+    LEGO
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10">
+    <!-- Responsive layout: stacked on mobile, side-by-side on desktop -->
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <div class="my_vision w-full lg:w-1/2 text-center lg:text-left">
+        <h2 class=" text-3xl md:text-4xl font-bold mb-4 text-primary-800 ">
+          My Vision in Action
+        </h2>
+        <p class="text-xl mb-6">
+          Learn more about my vision for Texas REALTORS®.
+        </p>
+        <a href="#contact" class="inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer bg-secondary hover:brightness-150">
+          Get Involved
+        </a>
+      </div>
+
+      <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <div class="hero-video bg-gray-800 primary-glow">
+          <video class="w-full h-full object-cover" controls autoplay muted playsinline>
+            <source src="/images/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
 
   <section id="lego" class="lego-bg relative text-white overflow-hidden min-h-svh flex flex-col justify-center items-center py-20 md:py-24">
