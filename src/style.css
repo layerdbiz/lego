@@ -1,373 +1,344 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700;800;900&display=swap");
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
 @theme {
-    /* COLORS */
-    --color-primary: #5e186e;
-    --color-primary-100: #F3E8FF;
-    --color-primary-200: #E9D5FF;
-    --color-primary-300: #D8B4FE;
-    --color-primary-400: #C084FC;
-    --color-primary-500: #A855F7;
-    --color-primary-600: #9333EA;
-    --color-primary-700: #7E22CE;
-    --color-primary-800: #5E186E;
-    --color-primary-900: #581C87;
+  /* COLORS */
+  --color-primary: #5e186e;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #e9d5ff;
+  --color-primary-300: #d8b4fe;
+  --color-primary-400: #c084fc;
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #5e186e;
+  --color-primary-900: #581c87;
 
-    --color-secondary: #e500ce;
-    --color-secondary-100: #FDE8FF;
-    --color-secondary-200: #FBCFE8;
-    --color-secondary-300: #F9A8D4;
-    --color-secondary-400: #F472B6;
-    --color-secondary-500: #E500CE;
-    --color-secondary-600: #D100B8;
-    --color-secondary-700: #B800A0;
-    --color-secondary-800: #A0008A;
-    --color-secondary-900: #80006E;
-    --color-accent: #4A8C2D;
-    --color-dark: #1A2E3A;
-    --color-light: #F5F9FC;
+  --color-secondary: #e500ce;
+  --color-secondary-100: #fde8ff;
+  --color-secondary-200: #fbcfe8;
+  --color-secondary-300: #f9a8d4;
+  --color-secondary-400: #f472b6;
+  --color-secondary-500: #e500ce;
+  --color-secondary-600: #d100b8;
+  --color-secondary-700: #b800a0;
+  --color-secondary-800: #a0008a;
+  --color-secondary-900: #80006e;
+  --color-accent: #4a8c2d;
+  --color-dark: #1a2e3a;
+  --color-light: #f5f9fc;
 
-    /* FONTS */
-    --font-sans: "Montserrat", sans-serif;
-    --font-serif: "Lora", serif;
+  /* FONTS */
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Lora", serif;
 }
 
 /* Base and globally applied styles */
-html, body {
-    overscroll-behavior: none;
-    @apply overflow-x-hidden;
-    scroll-behavior: smooth;
+html,
+body {
+  overscroll-behavior: none;
+  @apply overflow-x-hidden;
+  scroll-behavior: smooth;
 }
 
 .lego-bg {
-    background-image: url("/images/bg-legos.png");
-    background-attachment: fixed; /* Default for non-iOS */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("/images/bg-legos.png");
+  background-attachment: fixed; /* Default for non-iOS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Animations */
 @keyframes pop-in {
-    0% { opacity: 0; transform: scale(0.8) translateY(30px); }
-    100% { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-@keyframes fade-in-up {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes blobMove {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.08) rotate(8deg); }
-}
-
-
-@layer components {
-
-    .logo-container {
-        @apply flex items-center justify-center max-h-14 overflow-hidden;
-    }
-    .logo-container img {
-        height: 96px;
-        width: auto;
-    }
-
-    /* Animated blob SVG */
-    .animate-blob {
-        animation: blobMove 8s infinite linear alternate;
-    }
-    .bio-image-wrapper {
-        @apply relative flex items-center justify-center;
-    }
-    .bio-image-wrapper > div {
-        @apply absolute top-1/2 -translate-y-1/2 z-0;
-        left: -4rem;
-    }
-    
-    .bio-image-wrapper svg {
-        @apply w-[450px] h-[450px];
-    }
-    @screen md {
-        .bio-image-wrapper svg {
-            @apply w-[600px] h-[600px];
-        }
-    }
-    .bio-image {
-        @apply relative z-10;
-    }
-
-
-    /* Video section wrapper */
-    .hero-video {
-        @apply w-full max-w-80 mx-auto aspect-[12/20] rounded-xl overflow-hidden relative shadow-2xl;
-
-    }
-
-
-    .form-input {
-        @apply w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 transition-all duration-300 ease-in-out;
-    }
-
-
-    .experience-item {
-        @apply relative pl-6 mb-4;
-    }
-    .experience-item:before {
-        @apply absolute left-0 text-primary font-bold;
-        content: "•";
-    }
-
-    /* Specific element adjustments that are too complex for utilities directly in HTML */
-    #hero-main-slogan .hero-slogan-word {
-        @apply font-sans font-extrabold tracking-wider leading-tight;
-    }
-    #hero-main-slogan .slogan-secondary {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
-
-    /* Custom styles for LEGO blocks hover effect */
-    .lego-card:hover {
-        @apply -translate-y-2 scale-105 bg-white/25;
-    }
-}
-
-
-.watermark {
-    @apply absolute z-0 pointer-events-none;
-}
-
-#video .watermark {
-  font-size: 8rem;
-  right: 44.5rem;
-  top: 2.5rem;
-  left: auto !important;
-  transform: none !important;
-  white-space: nowrap;
-}
-@media (max-width: 1024px) {
-  #video .watermark {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    font-size: 6rem !important;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: -5.8rem;
-    margin-right: 7rem;
-    opacity: 0.1;
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 
-
-@media (max-width: 768px) {
-  #video .watermark { font-size: 4rem; }
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-@media (max-width: 480px) {
-  #video .watermark { font-size: 3.5rem; }
+
+@keyframes blobMove {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.08) rotate(8deg);
+  }
 }
 
+@layer components {
+  .logo-container {
+    @apply flex items-center justify-center max-h-14 overflow-hidden;
+  }
+  .logo-container img {
+    height: 96px;
+    width: auto;
+  }
 
+  /* Animated blob SVG */
+  .animate-blob {
+    animation: blobMove 8s infinite linear alternate;
+  }
+  .bio-image-wrapper {
+    @apply relative flex items-center justify-center;
+  }
+  .bio-image-wrapper > div {
+    @apply absolute top-1/2 -translate-y-1/2 z-0;
+    left: -4rem;
+  }
+
+  .bio-image-wrapper svg {
+    @apply w-[450px] h-[450px];
+  }
+
+  .bio-image {
+    @apply relative z-10;
+  }
+
+  /* Video section wrapper */
+  .hero-video {
+    @apply w-full max-w-80 mx-auto aspect-[12/20] rounded-xl overflow-hidden relative shadow-2xl;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 transition-all duration-300 ease-in-out;
+  }
+
+  .experience-item {
+    @apply relative pl-6 mb-4;
+  }
+  .experience-item:before {
+    @apply absolute left-0 text-primary font-bold;
+    content: "•";
+  }
+
+  /* Specific element adjustments that are too complex for utilities directly in HTML */
+  #hero-main-slogan .hero-slogan-word {
+    @apply font-sans font-extrabold tracking-wider leading-tight;
+  }
+  #hero-main-slogan .slogan-secondary {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Custom styles for LEGO blocks hover effect */
+  .lego-card:hover {
+    @apply -translate-y-2 scale-105 bg-white/25;
+  }
+}
 
 /* REFINED: body only sets background-color, no image properties */
 body {
-    background-color: var(--color-gray-50, #f5f9fc);
+  background-color: var(--color-gray-50, #f5f9fc);
 }
 
 /* Aggressive iOS-specific fix for fixed backgrounds using pseudo-element */
 body.is-ios::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background-image: url("/images/bg-legos.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    pointer-events: none;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url("/images/bg-legos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 /* On iOS, remove the background from .lego-bg to avoid conflicts */
 body.is-ios .lego-bg {
-    background: none !important;
+  background: none !important;
 }
-
 
 /* Mobile menu specific styles */
 .mobile-menu {
-    @apply absolute top-full left-0 right-0 bg-white p-4 shadow-lg border-t border-gray-200;
+  @apply absolute top-full left-0 right-0 bg-white p-4 shadow-lg border-t border-gray-200;
 }
 .mobile-menu.hidden {
-    @apply hidden;
+  @apply hidden;
 }
 .mobile-menu:not(.hidden) {
-    @apply flex flex-col space-y-4;
+  @apply flex flex-col space-y-4;
 }
 
 .nav-links a.active-link {
-    @apply text-primary font-bold;
+  @apply text-primary font-bold;
 }
 #mobile-menu a.active-link {
-    @apply bg-primary-100;
+  @apply bg-primary-100;
 }
 
 /* Stronger Radial gradient overlay for hero section and lego section */
 .radial-gradient-overlay {
-    background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(0,0,0,0.9) 100%);
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 /* Accordion Animation Styles */
 .accordion-content {
-    overflow: hidden;
-    transition: height 0.3s ease-out, opacity 0.3s ease-out;
-    opacity: 1;
+  overflow: hidden;
+  transition: height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 1;
 }
 
 details:not([open]) > .accordion-content {
-    height: 0 !important;
-    opacity: 0;
+  height: 0 !important;
+  opacity: 0;
 }
 
 summary {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 /* Media Queries - simplified where possible, but still necessary for responsive adjustments */
 @media (max-width: 768px) {
-    #hero-cover .container {
-        @apply pt-20 pb-20;
-    }
-    #hero-main-slogan {
-        @apply text-4xl mb-6;
-    }
-    #hero-main-slogan .hero-slogan-word {
-        @apply tracking-wide leading-tight;
-    }
-    .hero-lego-brick-outline {
-        padding: 10px 20px 8px 20px;
-        border-width: 2.5px;
-    }
-    .hero-lego-nubs-outline {
-        @apply left-2 right-2;
-        top: -8px;
-    }
-    .hero-lego-nub-outline {
-        width: 14px;
-        height: 8px;
-        border-width: 2px;
-    }
-    .hero-lego-text-image {
-        @apply text-3xl;
-    }
-    .hero-brod-text-image {
-        @apply text-lg mt-2;
-    }
+  #hero-cover .container {
+    @apply pt-20 pb-20;
+  }
+  #hero-main-slogan {
+    @apply text-4xl mb-6;
+  }
+  #hero-main-slogan .hero-slogan-word {
+    @apply tracking-wide leading-tight;
+  }
+  .hero-lego-brick-outline {
+    padding: 10px 20px 8px 20px;
+    border-width: 2.5px;
+  }
+  .hero-lego-nubs-outline {
+    @apply left-2 right-2;
+    top: -8px;
+  }
+  .hero-lego-nub-outline {
+    width: 14px;
+    height: 8px;
+    border-width: 2px;
+  }
+  .hero-lego-text-image {
+    @apply text-3xl;
+  }
+  .hero-brod-text-image {
+    @apply text-lg mt-2;
+  }
 
-    .min-h-svh > .container {
-        @apply pt-16 pb-16;
-    }
-    #lego {
-        @apply pt-20 pb-20;
-    }
-    #lego.min-h-svh > .container {
-        @apply pt-20 pb-20;
-    }
-    #lego h2 {
-        @apply text-3xl mb-10;
-    }
-    .lego-letter {
-        @apply p-5;
-    }
-    .lego-letter .text-7xl {
-        @apply text-5xl mb-3;
-    }
-    .lego-letter .text-2xl {
-        @apply text-lg mb-2;
-    }
-    .lego-letter .text-base {
-        @apply text-sm;
-    }
+  .min-h-svh > .container {
+    @apply pt-16 pb-16;
+  }
+  #lego {
+    @apply pt-20 pb-20;
+  }
+  #lego.min-h-svh > .container {
+    @apply pt-20 pb-20;
+  }
+  #lego h2 {
+    @apply text-3xl mb-10;
+  }
+  .lego-letter {
+    @apply p-5;
+  }
+  .lego-letter .text-7xl {
+    @apply text-5xl mb-3;
+  }
+  .lego-letter .text-2xl {
+    @apply text-lg mb-2;
+  }
+  .lego-letter .text-base {
+    @apply text-sm;
+  }
 
-    .youtube-short-container {
-        @apply h-[500px] max-w-70;
-    }
-    .hero-video {
-        @apply max-w-70;
-    }
+  .youtube-short-container {
+    @apply h-[500px] max-w-70;
+  }
+  .hero-video {
+    @apply max-w-70;
+  }
 
-    /* ABOUT SECTION OPTIMIZATIONS FOR MOBILE/TABLET */
-    #about .container {
-        @apply py-10;
-    }
-    #about .lg\:w-2\/5, #about .lg\:w-3\/5 {
-        @apply w-full;
-    }
-    #about .flex-col {
-        @apply gap-8;
-    }
-    #about h2 {
-        @apply text-3xl mb-4;
-    }
-    #about .mt-8 {
-        @apply mt-6;
-    }
-    #about .mt-6 {
-        @apply mt-4;
-    }
-    /* Specific overrides for text sizes */
-    .about-image-info h3 {
-        @apply text-xl;
-    }
-    .about-image-info p {
-        @apply text-base;
-    }
+  /* ABOUT SECTION OPTIMIZATIONS FOR MOBILE/TABLET */
+  #about .container {
+    @apply py-10;
+  }
+  #about .lg\:w-2\/5,
+  #about .lg\:w-3\/5 {
+    @apply w-full;
+  }
+  #about .flex-col {
+    @apply gap-8;
+  }
+  #about h2 {
+    @apply text-3xl mb-4;
+  }
+  #about .mt-8 {
+    @apply mt-6;
+  }
+  #about .mt-6 {
+    @apply mt-4;
+  }
+  /* Specific overrides for text sizes */
+  .about-image-info h3 {
+    @apply text-xl;
+  }
+  .about-image-info p {
+    @apply text-base;
+  }
 }
 
 @media (max-width: 480px) {
-    #hero-main-slogan {
-        @apply text-3xl;
-    }
-    .hero-lego-text-image {
-        @apply text-2xl;
-    }
-    .hero-brod-text-image {
-        @apply text-base;
-    }
-    #hero-lego-brod {
-        @apply mt-6;
-    }
-    #hero-cover .container {
-        @apply pt-16 pb-16;
-    }
+  #hero-main-slogan {
+    @apply text-3xl;
+  }
+  .hero-lego-text-image {
+    @apply text-2xl;
+  }
+  .hero-brod-text-image {
+    @apply text-base;
+  }
+  #hero-lego-brod {
+    @apply mt-6;
+  }
+  #hero-cover .container {
+    @apply pt-16 pb-16;
+  }
 
-    #lego h2 {
-        @apply text-2xl;
-    }
-    .lego-letter .text-7xl {
-        @apply text-4xl;
-    }
-    .lego-letter .text-2xl {
-        @apply text-base;
-    }
-    .min-h-svh > .container {
-        @apply pt-12 pb-12;
-    }
-    #lego.min-h-svh > .container {
-        @apply pt-16 pb-16;
-    }
-    /* ABOUT SECTION OPTIMIZATIONS FOR SMALL MOBILE */
-    #about .container {
-        @apply py-6;
-    }
-    #about h2 {
-        @apply text-2xl mb-3;
-    }
+  #lego h2 {
+    @apply text-2xl;
+  }
+  .lego-letter .text-7xl {
+    @apply text-4xl;
+  }
+  .lego-letter .text-2xl {
+    @apply text-base;
+  }
+  .min-h-svh > .container {
+    @apply pt-12 pb-12;
+  }
+  #lego.min-h-svh > .container {
+    @apply pt-16 pb-16;
+  }
+  /* ABOUT SECTION OPTIMIZATIONS FOR SMALL MOBILE */
+  #about .container {
+    @apply py-6;
+  }
+  #about h2 {
+    @apply text-2xl mb-3;
+  }
 }
