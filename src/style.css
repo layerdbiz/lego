@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700;800;900&display=swap");
-@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@theme {
+:root {
     /* COLORS */
     --color-primary: #5e186e;
     --color-primary-100: #F3E8FF;
@@ -36,7 +38,7 @@
 /* Base and globally applied styles */
 html, body {
     overscroll-behavior: none;
-    @apply overflow-x-hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -68,7 +70,11 @@ html, body {
 @layer components {
 
     .logo-container {
-        @apply flex items-center justify-center max-h-14 overflow-hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 6rem;
+        overflow: hidden;
     }
     .logo-container img {
         height: 96px;
@@ -90,7 +96,7 @@ html, body {
     .bio-image-wrapper svg {
         @apply w-[450px] h-[450px];
     }
-    @screen md {
+    @media (min-width: 768px) {
         .bio-image-wrapper svg {
             @apply w-[600px] h-[600px];
         }
